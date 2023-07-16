@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.18.38"],\
             ["@types/react", "npm:18.2.15"],\
             ["@types/react-dom", "npm:18.2.7"],\
+            ["eslint-config-react", "npm:1.1.7"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:ce48526c5397ec9f2cc66ff296cad669feb9684d58b4dbd6a673d5f4cd2ad0d080a6f4fb54b0369b59c3d615669da8d11f98d4bd36d1361bc87635d6f1d230ee#npm:18.2.0"],\
             ["react-scripts", "virtual:ce48526c5397ec9f2cc66ff296cad669feb9684d58b4dbd6a673d5f4cd2ad0d080a6f4fb54b0369b59c3d615669da8d11f98d4bd36d1361bc87635d6f1d230ee#npm:5.0.1"],\
@@ -8224,6 +8225,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["eslint-config-react", [\
+        ["npm:1.1.7", {\
+          "packageLocation": "./.yarn/cache/eslint-config-react-npm-1.1.7-6e3860b2e1-15d3d7f78e.zip/node_modules/eslint-config-react/",\
+          "packageDependencies": [\
+            ["eslint-config-react", "npm:1.1.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["eslint-config-react-app", [\
         ["npm:7.0.1", {\
           "packageLocation": "./.yarn/cache/eslint-config-react-app-npm-7.0.1-78bab43841-a67e082180.zip/node_modules/eslint-config-react-app/",\
@@ -14726,6 +14736,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.18.38"],\
             ["@types/react", "npm:18.2.15"],\
             ["@types/react-dom", "npm:18.2.7"],\
+            ["eslint-config-react", "npm:1.1.7"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:ce48526c5397ec9f2cc66ff296cad669feb9684d58b4dbd6a673d5f4cd2ad0d080a6f4fb54b0369b59c3d615669da8d11f98d4bd36d1361bc87635d6f1d230ee#npm:18.2.0"],\
             ["react-scripts", "virtual:ce48526c5397ec9f2cc66ff296cad669feb9684d58b4dbd6a673d5f4cd2ad0d080a6f4fb54b0369b59c3d615669da8d11f98d4bd36d1361bc87635d6f1d230ee#npm:5.0.1"],\
