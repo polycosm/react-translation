@@ -1,6 +1,5 @@
 import { ChangeEvent, ReactElement, useContext } from 'react';
-
-import { DEFAULT_LANGUAGE_OPTIONS, LanguageContext } from './translation';
+import { DEFAULT_LANGUAGE_OPTIONS, LanguageContext } from '../contexts';
 
 export interface LanguageSelectProps {
   languages?: Record<string, string>;

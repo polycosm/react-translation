@@ -1,8 +1,7 @@
 import { ReactElement, useState } from 'react';
 
-import { DEFAULT_LANGUAGE, LanguageContext } from './translation';
-import LanguageSelect from './LanguageSelect';
-import Text from './Text';
+import { DEFAULT_LANGUAGE, LanguageContext } from './contexts';
+import { LanguageSelect, Text } from './components';
 
 export default function App(): ReactElement {
   const [currentLanguage, setCurrentLanguage] = useState<string>(DEFAULT_LANGUAGE);
