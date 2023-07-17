@@ -1,20 +1,33 @@
-import { ReactElement, useContext, useMemo, useState } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 import { LanguageContext } from '../contexts';
-import { TranslationClient, MockTranslationClient } from '../clients/translation';
+import { TranslationClient, GoogleTranslationClient } from '../clients/translation';
 
 export interface TextProps {
-  client?: TranslationClient;
   value: string;
 }
 
-export default function Text({ client, value }: TextProps): ReactElement {
-  const translationClient = client ?? new MockTranslationClient();
+const apiKey = process.env.REACT_APP_GOOGLE_TRANSLATION_API_KEY;
+if (apiKey === undefined) {
+  throw new Error('Please configure REACT_APP_GOOGLE_TRANSLATION_API_KEY');
+}
+
+const translationClient: TranslationClient = new GoogleTranslationClient(apiKey);
+
+export default function Text({ value }: TextProps): ReactElement {
   const [translation, setTranslation] = useState<string>(value);
+
   const { currentLanguage } = useContext(LanguageContext);
 
-  useMemo(
-    () => setTranslation(translationClient.translate(value, currentLanguage)),
-    [currentLanguage, setTranslation, value],
+  useEffect(
+    () => {
+      async function translate() {
+        const result = await translationClient.translate(value, currentLanguage);
+        setTranslation(result);
+      }
+
+      translate();
+    },
+    [value, currentLanguage, setTranslation, translationClient],
   )
 
   return (

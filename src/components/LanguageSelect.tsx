@@ -15,12 +15,11 @@ export default function LanguageSelect({
   }
 
   return (
-    <select onChange={onChange}>
+    <select onChange={onChange} defaultValue={currentLanguage}>
       {Object.keys(languages).map((value) => (
         <option
           value={value}
           key={value}
-          selected={value == currentLanguage}
         >
           {languages[value]}
         </option>
